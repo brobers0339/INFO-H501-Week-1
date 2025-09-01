@@ -29,5 +29,7 @@ def parentheses(sequence): #creates function to check if parentheses are balance
             count += 1
         elif char == ')': #if character is a closing parenthesis, subtracts 1 from counter
             count -= 1
+            if count < 0: # more closing than opening at this point, so parentheses are unbalanced
+                return False
     return count == 0 #if counter is 0 (not greater than or less than 0), parentheses are balanced and returns True. If counter is not 0, parentheses are not balanced and returns False.
     
